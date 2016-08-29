@@ -1,0 +1,15 @@
+---
+spring:
+  profiles: expeureka01
+
+server:
+  port: 18802
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://172.16.30.235:18803/eureka/
