@@ -1,0 +1,18 @@
+spring:
+  profiles: default
+  application:
+    name: eureka-server-clustered
+
+server:
+  port: 18801
+
+eureka:
+  instance:
+    hostname: eureka-default
+    metadataMap:
+      instanceId: ${spring.application.name}:${random.value}}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:18802/eureka/,http://localhost:18801/eureka/

@@ -1,0 +1,14 @@
+server:
+    port: ${SERVER_PORT}
+
+spring:
+  profiles: expenv
+  cloud:
+      config:
+        discovery:
+          enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: ${HOST_ADDRESS}
