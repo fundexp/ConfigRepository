@@ -2,13 +2,19 @@
 ---
 spring:
   profiles: profile1
+  cloud:
+    config:
+      discovery:
+        enabled: true
 
 eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.12.35.10
   client:
     serviceUrl:
       defaultZone: http://localhost:18801/eureka/
 
-spring.cloud.config.discovery.enabled: true
 
 server:
   port: 18891
