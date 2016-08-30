@@ -10,7 +10,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: ${server.address}
+    ip-address: $SERVER_ADDRESS
     metadataMap:
       instanceId: ${spring.application.name}:${random.value}}
   client:
@@ -19,7 +19,7 @@ eureka:
 
 
 server:
-  port: ${port}
+  port: $SERVER_PORT
 
 content: this is from github
 
