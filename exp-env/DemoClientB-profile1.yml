@@ -19,7 +19,7 @@ eureka:
 
 
 server:
-  port: 18891
+  port: ${server.port}
 
 content: this is from github
 
