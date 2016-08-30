@@ -10,7 +10,9 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: 127.12.35.10
+    ip-address:
+    metadataMap:
+          instanceId: ${spring.application.name}:${random.value}}
   client:
     serviceUrl:
       defaultZone: http://localhost:18801/eureka/
