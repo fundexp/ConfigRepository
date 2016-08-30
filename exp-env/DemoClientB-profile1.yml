@@ -19,7 +19,7 @@ eureka:
 
 
 server:
-  port: @service_port@
+  port: ${port}
 
 content: this is from github
 
