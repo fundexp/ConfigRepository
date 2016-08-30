@@ -1,0 +1,17 @@
+# mvn spring-boot:run -Dspring.profiles.active=dev1
+---
+spring:
+  profiles: profile2
+
+server:
+  port: 18892
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:18801/eureka/
+
+spring.cloud.config.discovery.enabled: true
+
+
+
