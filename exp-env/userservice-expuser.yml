@@ -1,5 +1,5 @@
 spring:
-  profiles: envuser
+  profiles: expuser
   datasource:
     url:  jdbc:mysql://${USER_DB}/tenant_user?autoReconnect=true&useSSL=false
 
