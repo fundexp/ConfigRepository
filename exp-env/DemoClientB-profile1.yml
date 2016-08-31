@@ -4,17 +4,18 @@ spring:
   profiles: profile1
   rabbitmq:
     listener:
-        auto-startup: true
-    publisher-confirms: true
-    publisher-returns: true
-    dynamic: true
-    addresses: ${vcap.services.${PREFIX:}rabbitmq.credentials.uri:amqp://${RABBITMQ_HOST:localhost}:${RABBITMQ_PORT:5672}}
+      auto-startup: true
     host: localhost
-    port: 5672
-    username: ihsanever
-    password: guming0927
+        port: 5672
+        username: ihsanever
+        password: guming0927
+        publisher-confirms: true
   cloud:
     config:
+      server:
+        monitor:
+          github:
+            enable: true
       discovery:
         enabled: true
 
@@ -35,5 +36,5 @@ endpoints:
   restart:
     enable: true
 
-content: guming0927
+content: 12345678
 ---
