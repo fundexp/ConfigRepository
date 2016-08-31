@@ -3,6 +3,11 @@
 spring:
   profiles: profile1
   rabbitmq:
+    listener:
+        auto-startup: true
+    publisher-confirms: true
+    publisher-returns: true
+    dynamic: true
     addresses: ${vcap.services.${PREFIX:}rabbitmq.credentials.uri:amqp://${RABBITMQ_HOST:localhost}:${RABBITMQ_PORT:5672}}
     host: localhost
     port: 5672
