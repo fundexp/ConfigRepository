@@ -2,6 +2,11 @@
 ---
 spring:
   profiles: profile1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: ihsanever
+    password: guming0927
   cloud:
     config:
       discovery:
@@ -24,15 +29,5 @@ endpoints:
   restart:
     enable: true
 
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: ihsanever
-    password: guming0927
-
-
 content: has changed
-
-
-
+---
