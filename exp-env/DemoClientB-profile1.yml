@@ -2,8 +2,20 @@
 ---
 spring:
   profiles: profile1
+  rabbitmq:
+    listener:
+      auto-startup: true
+    host: localhost
+    port: 5672
+    username: ihsanever
+    password: guming0927
+    publisher-confirms: true
   cloud:
     config:
+      server:
+        monitor:
+          github:
+            enable: true
       discovery:
         enabled: true
 
@@ -17,11 +29,12 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:18801/eureka/
 
-
 server:
   port: ${SERVER_PORT}
 
-content: this is from github
+endpoints:
+  restart:
+    enable: true
 
-
-
+content: guming
+---
