@@ -21,7 +21,7 @@ eureka:
 server:
   port: ${SERVER_PORT}
 
-content: this is from github
+content: has changed
 
 
 
