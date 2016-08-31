@@ -1,0 +1,15 @@
+spring:
+  profiles: envuser
+  datasource:
+    url:  jdbc:mysql://${USER_DB}/tenant_user?autoReconnect=true&useSSL=false
+
+server:
+    port: 19944
+
+hosts:
+    frontend-host: http://${FRONT_ADDR}
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: ${EUREKA_SERVERS}
