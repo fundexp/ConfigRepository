@@ -3,13 +3,14 @@ spring:
   profiles: expeureka02
 
 server:
-  port: 18803
+  port: ${SERVER_PORT}
 
 eureka:
   instance:
     prefer-ip-address: true
+    ip-address: ${HOST_ADDRESS}
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://172.16.30.235:18802/eureka/
+      defaultZone: ${EUREKA_SERVERS}
