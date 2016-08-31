@@ -6,10 +6,10 @@ spring:
     listener:
       auto-startup: true
     host: localhost
-      port: 5672
-      username: ihsanever
-      password: guming0927
-      publisher-confirms: true
+    port: 5672
+    username: ihsanever
+    password: guming0927
+    publisher-confirms: true
   cloud:
     config:
       server:
