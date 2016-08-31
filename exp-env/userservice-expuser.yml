@@ -4,12 +4,17 @@ spring:
     url:  jdbc:mysql://${USER_DB}/tenant_user?autoReconnect=true&useSSL=false
 
 server:
-    port: 19944
+    port: ${SERVER_PORT}
 
 hosts:
     frontend-host: http://${FRONT_ADDR}
 
 eureka:
-    client:
-        serviceUrl:
-            defaultZone: ${EUREKA_SERVERS}
+  instance:
+    prefer-ip-address: true
+    ip-address: ${HOST_ADDRESS}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVERS}
