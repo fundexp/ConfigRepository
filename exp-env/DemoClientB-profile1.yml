@@ -29,5 +29,5 @@ endpoints:
   restart:
     enable: true
 
-content: has changed
+content: assassin
 ---
