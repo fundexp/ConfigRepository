@@ -1,6 +1,6 @@
 ---
 spring:
-  profiles: profile1
+  profiles: profile2
   rabbitmq:
     addresses: amqp://ihsanever:guming0927@localhost:5672/
     host: localhost
