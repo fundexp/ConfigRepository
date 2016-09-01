@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: I'm successing
+content: I'm changed
 ---
