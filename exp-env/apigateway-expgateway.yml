@@ -1,0 +1,39 @@
+spring:
+  profiles: expgateway
+
+server:
+  port: ${SERVER_PORT}
+
+eureka:
+    client:
+       serviceUrl:
+         defaultZone: ${EUREKA_SERVERS}
+
+#need to sensitive cookies, in order to bring authorization headers to target
+zuul:
+    routes:
+        test:
+            path: /demo/**
+            sensitiveHeaders: Cookie,Set-Cookie
+            serviceId: SERVERRESOURCE
+        gettoken:
+            path: /security/**
+            sensitiveHeaders: Cookie,Set-Cookie
+            serviceId: AUTH-SERVER
+        user:
+            path: /user-service/**
+            serviceId: USER-SERVICE
+            sensitiveHeaders: Cookie,Set-Cookie
+
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://${AUTH_ADDR}/oauth/token
+      userAuthorizationUri: http://${AUTH_ADDR}/oauth/authorize
+      clientId: gateway
+      clientSecret: gateway
+    resource:
+      userInfoUri: http://${AUTH_ADDR}/user
+      token-info-uri: http://${AUTH_ADDR}/oauth/check_token
+      grant-type: client_credentials
+  sessions: ALWAYS
