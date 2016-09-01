@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: amazing
+content: I'm successing
 ---
