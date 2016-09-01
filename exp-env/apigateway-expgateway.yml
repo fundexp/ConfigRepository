@@ -5,9 +5,14 @@ server:
   port: ${SERVER_PORT}
 
 eureka:
-    client:
-       serviceUrl:
-         defaultZone: ${EUREKA_SERVERS}
+  instance:
+    prefer-ip-address: true
+    ip-address: ${HOST_ADDRESS}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVERS}
 
 #need to sensitive cookies, in order to bring authorization headers to target
 zuul:
