@@ -1,4 +1,3 @@
-# mvn spring-boot:run -Dspring.profiles.active=dev1
 ---
 spring:
   profiles: profile1
@@ -36,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: guming
+content: assassin
 ---
