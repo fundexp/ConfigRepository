@@ -1,0 +1,20 @@
+---
+spring:
+  profiles: expauth
+  datasource:
+    url: jdbc:mysql://${AUTH_DB}/auth
+    password: ${AUTH_DB_PWD}
+    username: ${AUTH_DB_USER}
+
+server:
+  port: ${SERVER_PORT}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: ${HOST_ADDRESS}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVERS}
