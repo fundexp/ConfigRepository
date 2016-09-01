@@ -29,7 +29,7 @@ eureka:
       defaultZone: http://localhost:18801/eureka/
 
 server:
-  port: ${SERVER_PORT}
+  port: 11111
 
 endpoints:
   restart:
