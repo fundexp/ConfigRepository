@@ -11,19 +11,15 @@ eureka:
 
 #need to sensitive cookies, in order to bring authorization headers to target
 zuul:
-    routes:
-        test:
-            path: /demo/**
-            sensitiveHeaders: Cookie,Set-Cookie
-            serviceId: SERVERRESOURCE
-        gettoken:
-            path: /security/**
-            sensitiveHeaders: Cookie,Set-Cookie
-            serviceId: AUTH-SERVER
-        user:
-            path: /user-service/**
-            serviceId: USER-SERVICE
-            sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    gettoken:
+      path: /security/**
+      sensitiveHeaders: Cookie,Set-Cookie
+      serviceId: authserver
+    user:
+      path: /userservice/**
+      serviceId: userservice
+      sensitiveHeaders: Cookie,Set-Cookie
 
 security:
   oauth2:
