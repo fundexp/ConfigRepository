@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: o my ladygaga
+content: now ,I'm changing
 ---
