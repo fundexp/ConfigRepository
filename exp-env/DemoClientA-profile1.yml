@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: demoA has changed
+content: we are successing from DemoA
 ---
