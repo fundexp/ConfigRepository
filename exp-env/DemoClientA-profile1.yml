@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: hi,you are successful from DemoA
+content: zailaiyifa DemoA
 ---
