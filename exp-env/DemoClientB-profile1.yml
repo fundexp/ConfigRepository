@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: we are successing from DemoB
+content: hi,you are successfull DemoB
 ---

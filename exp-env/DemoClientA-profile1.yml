@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: we are successing from DemoA
+content: hi,you are successful from DemoA
 ---
