@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: hahahaha DemoA
+content: DemoA has changed
 ---
