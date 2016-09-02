@@ -29,11 +29,11 @@ eureka:
       defaultZone: http://localhost:18801/eureka/
 
 server:
-  port: 10000
+  port: 9091
 
 endpoints:
   restart:
     enable: true
 
-content: demoA
+content: demoA has changed
 ---
