@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: has changed
+content: test webhook
 ---
