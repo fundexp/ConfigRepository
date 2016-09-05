@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: DemoA has changed
+content: test2 DemoA
 ---

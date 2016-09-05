@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: just update variable
+content: test1 DemoB
 ---
