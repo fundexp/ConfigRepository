@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: test1 DemoB
+content: 11111111
 ---
