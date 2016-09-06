@@ -33,4 +33,4 @@ endpoints:
   restart:
     enable: true
 
-content: demoB last change
+content: demoB1
