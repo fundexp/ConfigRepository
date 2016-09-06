@@ -4,7 +4,7 @@ server:
 spring:
   profiles: expenv
   cloud:
-      config:
+      com.easeshift.config:
         discovery:
           enabled: true
 
