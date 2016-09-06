@@ -35,5 +35,5 @@ endpoints:
   restart:
     enable: true
 
-content: 11111111
+content: api within demoB
 ---
