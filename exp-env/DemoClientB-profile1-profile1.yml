@@ -2,15 +2,13 @@
 spring:
   profiles: profile1
   rabbitmq:
-    addresses: amqp://ihsanever:guming0927@localhost:5672/
+    addresses: amqp://localhost:5672/
     host: localhost
     port: 5672
-    username: ihsanever
-    password: guming0927
     publisher-confirms: true
     virtual-host: /
   cloud:
-    config:
+    com.easeshift.config:
       server:
         monitor:
           github:
@@ -21,7 +19,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: localhost
+    ip-address: ${SERVER_ADDRESS}
     metadataMap:
       instanceId: ${spring.application.name}:${random.value}}
   client:
@@ -29,10 +27,10 @@ eureka:
       defaultZone: http://localhost:18801/eureka/
 
 server:
-  port: 9091
+  port: 10002
 
 endpoints:
   restart:
     enable: true
 
-content: DemoA last change
+content: demoB1
