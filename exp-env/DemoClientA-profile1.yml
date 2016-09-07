@@ -22,8 +22,6 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: localhost
-    metadataMap:
-      instanceId: ${spring.application.name}:${random.value}}
   client:
     serviceUrl:
       defaultZone: http://localhost:18801/eureka/

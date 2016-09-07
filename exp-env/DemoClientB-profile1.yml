@@ -1,6 +1,5 @@
----
 spring:
-  profiles: 222
+  profiles: profile1
   rabbitmq:
     addresses: amqp://localhost:5672/
     host: localhost
@@ -27,7 +26,7 @@ eureka:
       defaultZone: http://localhost:18801/eureka/
 
 server:
-  port: 9090
+  port: ${SERVER_PORT}
 
 endpoints:
   restart:
