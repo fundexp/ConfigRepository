@@ -1,0 +1,37 @@
+---
+spring:
+  profiles: profile1
+  rabbitmq:
+    addresses: amqp://localhost:5672/
+    host: localhost
+    port: 5672
+    publisher-confirms: true
+    virtual-host: /
+  cloud:
+    com.easeshift.config:
+      server:
+        monitor:
+          github:
+            enable: true
+      discovery:
+        enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: ${SERVER_ADDRESS}
+    metadataMap:
+      instanceId: ${spring.application.name}:${random.value}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:18801/eureka/
+
+server:
+  port: ${SERVER_PORT}
+
+endpoints:
+  restart:
+    enable: true
+
+content: demob1aa
+---
