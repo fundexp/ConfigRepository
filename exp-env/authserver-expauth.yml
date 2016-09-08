@@ -8,13 +8,3 @@ spring:
 
 server:
   port: ${SERVER_PORT}
-
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: ${HOST_ADDRESS}
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVERS}
