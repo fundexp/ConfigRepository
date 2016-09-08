@@ -9,23 +9,3 @@ server:
 hosts:
     frontend-host: http://${FRONT_ADDR}
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: ${HOST_ADDRESS}
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVERS}
-
-security:
-  oauth2:
-    resource:
-      token-info-uri: http://${AUTH_ADDR}/oauth/check_token
-    client:
-      client-id: UserService
-      client-secret: password
-      user-authorization-uri: http://${AUTH_ADDR}/oauth/authorize
-      access-token-uri: http://${AUTH_ADDR}/oauth/token
-      grant-type: client_credentials
