@@ -33,5 +33,5 @@ endpoints:
   restart:
     enable: true
 
-content: demob1aaasd
+content: demob1
 ---
