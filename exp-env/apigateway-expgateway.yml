@@ -1,5 +1,10 @@
 spring:
   profiles: expgateway
+  rabbitmq:
+    host: ${RABBIT_ADDRESS}
+    port: ${RABBIT_PORT}
+    publisher-confirms: true
+    virtual-host: /
 
 server:
   port: ${SERVER_PORT}
