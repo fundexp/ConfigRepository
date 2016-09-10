@@ -15,7 +15,7 @@ zuul:
     gettoken:
       path: /security/**
       sensitiveHeaders: Cookie,Set-Cookie
-      serviceId: authserver
+      serviceId: authservice
     user:
       path: /userservice/**
       serviceId: userservice
