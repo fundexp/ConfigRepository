@@ -8,7 +8,7 @@ spring:
     publisher-confirms: true
     virtual-host: /
   cloud:
-    com.easeshift.config:
+    config:
       server:
         monitor:
           github:

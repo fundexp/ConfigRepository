@@ -1,18 +1,13 @@
 spring:
   profiles: expgateway
+  rabbitmq:
+    host: ${RABBIT_ADDRESS}
+    port: ${RABBIT_PORT}
+    publisher-confirms: true
+    virtual-host: /
 
 server:
   port: ${SERVER_PORT}
-
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: ${HOST_ADDRESS}
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVERS}
 
 #need to sensitive cookies, in order to bring authorization headers to target
 zuul:
@@ -20,7 +15,7 @@ zuul:
     gettoken:
       path: /security/**
       sensitiveHeaders: Cookie,Set-Cookie
-      serviceId: authserver
+      serviceId: authservice
     user:
       path: /userservice/**
       serviceId: userservice
@@ -29,12 +24,10 @@ zuul:
 security:
   oauth2:
     client:
-      accessTokenUri: http://${AUTH_ADDR}/oauth/token
-      userAuthorizationUri: http://${AUTH_ADDR}/oauth/authorize
-      clientId: gateway
-      clientSecret: gateway
+      accessTokenUri: /oauth/token
     resource:
-      userInfoUri: http://${AUTH_ADDR}/user
-      token-info-uri: http://${AUTH_ADDR}/oauth/check_token
-      grant-type: client_credentials
-  sessions: ALWAYS
+      userInfoUri: /user
+      token-info-uri: /oauth/check_token
+
+
+

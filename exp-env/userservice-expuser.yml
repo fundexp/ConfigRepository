@@ -1,31 +1,16 @@
 spring:
   profiles: expuser
+  rabbitmq:
+    host: ${RABBIT_ADDRESS}
+    port: ${RABBIT_PORT}
+    publisher-confirms: true
+    virtual-host: /
   datasource:
     url:  jdbc:mysql://${USER_DB}/tenant_user?autoReconnect=true&useSSL=false
 
 server:
     port: ${SERVER_PORT}
 
+
 hosts:
     frontend-host: http://${FRONT_ADDR}
-
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: ${HOST_ADDRESS}
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVERS}
-
-security:
-  oauth2:
-    resource:
-      token-info-uri: http://${AUTH_ADDR}/oauth/check_token
-    client:
-      client-id: UserService
-      client-secret: password
-      user-authorization-uri: http://${AUTH_ADDR}/oauth/authorize
-      access-token-uri: http://${AUTH_ADDR}/oauth/token
-      grant-type: client_credentials

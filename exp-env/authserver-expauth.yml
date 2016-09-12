@@ -1,6 +1,11 @@
 ---
 spring:
   profiles: expauth
+  rabbitmq:
+    host: ${RABBIT_ADDRESS}
+    port: ${RABBIT_PORT}
+    publisher-confirms: true
+    virtual-host: /
   datasource:
     url: jdbc:mysql://${AUTH_DB}/auth
     password: ${AUTH_DB_PWD}
@@ -9,12 +14,5 @@ spring:
 server:
   port: ${SERVER_PORT}
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: ${HOST_ADDRESS}
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVERS}
+
+
