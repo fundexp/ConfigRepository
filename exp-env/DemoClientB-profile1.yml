@@ -15,23 +15,45 @@ spring:
             enable: true
       discovery:
         enabled: true
-
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: ${SERVER_ADDRESS}
-    metadataMap:
-      instanceId: ${spring.application.name}:${random.value}}
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:18801/eureka/
-
-server:
-  port: ${SERVER_PORT}
-
-endpoints:
-  restart:
-    enable: true
+    config:
+      discovery:
+        enabled: true
+        service-id: configservice
+      enabled: true
+      fail-fast: true
+    consul:
+      discovery:
+        preferIpAddress: true
+        enabled: true
+        register: true
+        service-name: apigateway
+        #hostname: localhost
+        health-check-interval: 10s
+        health-check-timeout: 20s
+        heartbeat:
+          enabled: true
+        #health-check-url:
+        #host-info: configservice-host-info
+        #instance-id: server:172.16.33.150:server
+        ip-address: ${HOST_ADDRESS:localhost}
+        port: ${SERVER_PORT:18888}
+        lifecycle:
+          enabled: true
+        scheme: http
+        prefer-agent-address: false
+        register-health-check: true
+        tags: master
+        #health-check-path: ping -c1 google.com >/dev/null
+      #configservice:
+        #enabled: false
+        #fail-fast: true
+        #default-context: application
+      retry:
+        initial-interval: 1000
+        max-attempts: 4
+        max-interval: 1000
+      host: ${CONSUL_ADDRESS:localhost}
+      port: ${CONSUL_PORT:8500}
 
 content: demobaas1
 ---
