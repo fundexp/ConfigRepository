@@ -6,7 +6,7 @@ spring:
     publisher-confirms: true
     virtual-host: /
   datasource:
-    url: jdbc:mysql://${LOOKUP_DB}/lookup_portal
+    url: jdbc:mysql://${LOOKUP_DB}/lookup_portal?autoReconnect=true&useSSL=false
 
 server:
   port: ${SERVER_PORT}
