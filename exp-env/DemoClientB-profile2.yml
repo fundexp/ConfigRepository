@@ -1,6 +1,6 @@
 ---
 spring:
-  profiles: profile2
+  profiles: profile1
   rabbitmq:
     addresses: amqp://localhost:5672/
     host: localhost
@@ -13,25 +13,41 @@ spring:
         monitor:
           github:
             enable: true
+    consul:
       discovery:
+        preferIpAddress: true
         enabled: true
-
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: ${SERVER_ADDRESS}
-    metadataMap:
-      instanceId: ${spring.application.name}:${random.value}}
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:18801/eureka/
-
+        register: true
+        service-name: apigateway
+        #hostname: localhost
+        health-check-interval: 10s
+        health-check-timeout: 20s
+        heartbeat:
+          enabled: true
+        #health-check-url:
+        #host-info: configservice-host-info
+        #instance-id: server:172.16.33.150:server
+        ip-address: ${HOST_ADDRESS:localhost}
+        port: ${SERVER_PORT:9090}
+        lifecycle:
+          enabled: true
+        scheme: http
+        prefer-agent-address: false
+        register-health-check: true
+        tags: master
+        #health-check-path: ping -c1 google.com >/dev/null
+      #configservice:
+        #enabled: false
+        #fail-fast: true
+        #default-context: application
+      retry:
+        initial-interval: 1000
+        max-attempts: 4
+        max-interval: 1000
+      host: ${CONSUL_ADDRESS:localhost}
+      port: ${CONSUL_PORT:8500}
 server:
-  port: ${SERVER_PORT}
+  port: 9090
 
-endpoints:
-  restart:
-    enable: true
-
-content: demob2
+content: demobaas2
 ---

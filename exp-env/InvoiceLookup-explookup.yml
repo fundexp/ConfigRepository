@@ -1,0 +1,24 @@
+spring:
+  profiles: explookup
+  rabbitmq:
+    host: ${RABBIT_ADDRESS}
+    port: ${RABBIT_PORT}
+    publisher-confirms: true
+    virtual-host: /
+  datasource:
+    url: jdbc:mysql://${USER_DB}/lookup_portal
+
+server:
+  port: ${SERVER_PORT}
+
+user:
+  user-list:
+    -
+      id: ap
+      host: http://${AP_ADDRESS}
+    -
+      id: invoice-image
+      host: http://${INVOICE_IMAGE_ADDRESS}
+
+robot:
+  host: http://${BOT_SERVICE}/api/predictor

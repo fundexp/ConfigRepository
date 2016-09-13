@@ -8,25 +8,12 @@ spring:
     publisher-confirms: true
     virtual-host: /
   cloud:
-    config:
-      server:
-        monitor:
-          github:
-            enable: true
-      discovery:
-        enabled: true
-    config:
-      discovery:
-        enabled: true
-        service-id: configservice
-      enabled: true
-      fail-fast: true
     consul:
       discovery:
         preferIpAddress: true
         enabled: true
         register: true
-        service-name: apigateway
+        service-name: democlientB
         #hostname: localhost
         health-check-interval: 10s
         health-check-timeout: 20s
@@ -36,7 +23,7 @@ spring:
         #host-info: configservice-host-info
         #instance-id: server:172.16.33.150:server
         ip-address: ${HOST_ADDRESS:localhost}
-        port: ${SERVER_PORT:18888}
+        port: ${SERVER_PORT:9090}
         lifecycle:
           enabled: true
         scheme: http
