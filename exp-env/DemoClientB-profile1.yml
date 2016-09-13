@@ -42,5 +42,5 @@ spring:
       host: ${CONSUL_ADDRESS:localhost}
       port: ${CONSUL_PORT:8500}
 
-content: demobaas1
+content: asasasaaaaaaaa
 ---
