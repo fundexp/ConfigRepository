@@ -1,6 +1,6 @@
 ---
 spring:
-  profiles: expauth
+  profiles: exp
   rabbitmq:
     host: ${RABBIT_ADDRESS}
     port: ${RABBIT_PORT}

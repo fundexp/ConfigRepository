@@ -1,5 +1,5 @@
 spring:
-  profiles: expuser
+  profiles: exp
   rabbitmq:
     host: ${RABBIT_ADDRESS}
     port: ${RABBIT_PORT}
@@ -9,8 +9,8 @@ spring:
     url:  jdbc:mysql://${USER_DB}/tenant_user?autoReconnect=true&useSSL=false
 
 server:
-    port: ${SERVER_PORT}
+  port: ${SERVER_PORT}
 
 
 hosts:
-    frontend-host: http://${FRONT_ADDR}
+  frontend-host: http://${FRONT_ADDR}

@@ -1,5 +1,5 @@
 spring:
-  profiles: expgateway
+  profiles: exp
   rabbitmq:
     host: ${RABBIT_ADDRESS}
     port: ${RABBIT_PORT}
@@ -12,22 +12,30 @@ server:
 #need to sensitive cookies, in order to bring authorization headers to target
 zuul:
   routes:
-    gettoken:
-      path: /security/**
-      sensitiveHeaders: Cookie,Set-Cookie
+    auth:
+      path: /login/**
       serviceId: authservice
+      sensitiveHeaders: Cookie,Set-Cookie
     user:
       path: /userservice/**
       serviceId: userservice
       sensitiveHeaders: Cookie,Set-Cookie
+    inputs:
+      path: /invoiceinputservice/**
+      serviceId: invoiceinputservice
+      sensitiveHeaders: Cookie,Set-Cookie
+
+ribbon:
+  ReadTimeout: 10000
 
 security:
   oauth2:
     client:
       accessTokenUri: /oauth/token
+      clientId: gateway
+      clientSecret: gateway
     resource:
       userInfoUri: /user
       token-info-uri: /oauth/check_token
-
 
 

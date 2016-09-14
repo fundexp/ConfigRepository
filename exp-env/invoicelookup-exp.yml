@@ -2,7 +2,7 @@ server:
   port: ${SERVER_PORT}
 
 spring:
-  profiles: expenv
+  profiles: exp
   rabbitmq:
     host: ${RABBIT_ADDRESS}
     port: ${RABBIT_PORT}
