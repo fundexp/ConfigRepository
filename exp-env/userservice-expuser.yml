@@ -1,5 +1,5 @@
 spring:
-  profiles: exp
+  profiles: expuser
   rabbitmq:
     host: ${RABBIT_ADDRESS}
     port: ${RABBIT_PORT}
