@@ -20,6 +20,10 @@ zuul:
       path: /userservice/**
       serviceId: userservice
       sensitiveHeaders: Cookie,Set-Cookie
+    lookup:
+      path: /invoicelookup/**
+      serviceId: invoicelookup
+      sensitiveHeaders: Cookie,Set-Cookie
     inputs:
       path: /invoiceinputservice/**
       serviceId: invoiceinputservice
