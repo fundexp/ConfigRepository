@@ -11,7 +11,7 @@ hosts:
 spring:
   profiles: exp
   datasource:
-    url: jdbc:mysql://${LOOKUP_DB}/account_payable
+    url: jdbc:mysql://${INPUT_DB}/account_payable
     username: porta
     password: porta
 
