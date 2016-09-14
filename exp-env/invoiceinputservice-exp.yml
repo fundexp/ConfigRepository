@@ -1,0 +1,235 @@
+---
+refresh:
+  time: 300000
+gov:
+  pagesize: 50
+hosts:
+  api-host: http://localhost:19921
+  document-lookup-host: http://localhost:19944
+  document-lookup-client-id: ap
+
+spring:
+  profiles: exp
+  datasource:
+    url: jdbc:mysql://${LOOKUP_DB}/account_payable
+    username: porta
+    password: porta
+
+query:
+  addresses:
+    -
+      address: "https://zjfpcyweb.bjsat.gov.cn"
+      code: 1100
+      ip: ~
+      name: 北京
+      version:
+    -
+      address: "https://fpcy.tjsat.gov.cn"
+      code: 1200
+      ip: ~
+      name: 天津
+      version:
+    -
+      address: "https://fpcy.he-n-tax.gov.cn:82"
+      code: 1300
+      ip: ~
+      name: 河北
+      version:
+    -
+      address: "https://fpcy.tax.sx.cn"
+      code: 1400
+      ip: ~
+      name: 山西
+      version:
+    -
+      address: "https://fpcy.nm-n-tax.gov.cn"
+      code: 1500
+      ip: ~
+      name: 内蒙古
+      version:
+    -
+      address: "https://fpcy.tax.ln.cn"
+      code: 2100
+      ip: ~
+      name: 辽宁
+      version:
+    -
+      address: "https://fpcy.dlntax.gov.cn"
+      code: 2102
+      ip: ~
+      name: 大连
+      version:
+    -
+      address: "https://fpcy.jl-n-tax.gov.cn:4432"
+      code: 2200
+      ip: ~
+      name: 吉林
+      version:
+    -
+      address: "https://fpcy.hl-n-tax.gov.cn"
+      code: 2300
+      ip: ~
+      name: 黑龙江
+      version:
+    -
+      address: "https://fpcyweb.tax.sh.gov.cn:1001"
+      code: 3100
+      ip: ~
+      name: 上海
+      version:
+    -
+      address: "https://fpdk.jsgs.gov.cn:81"
+      code: 3200
+      ip: ~
+      name: 江苏
+      version: 3.0.08
+    -
+      address: "https://fpcyweb.zjtax.gov.cn"
+      code: 3300
+      ip: ~
+      name: 浙江
+      version:
+    -
+      address: "https://fpcy.nb-n-tax.gov.cn"
+      code: 3302
+      ip: ~
+      name: 宁波
+      version:
+    -
+      address: "https://fpcy.ah-n-tax.gov.cn"
+      code: 3400
+      ip: ~
+      name: 安徽
+      version:
+    -
+      address: "https://fpcyweb.fj-n-tax.gov.cn"
+      code: 3500
+      ip: ~
+      name: 福建
+      version:
+    -
+      address: "https://fpcy.xm-n-tax.gov.cn"
+      code: 3502
+      ip: ~
+      name: 厦门
+      version:
+    -
+      address: "https://fpcy.jxgs.gov.cn:82"
+      code: 3600
+      ip: ~
+      name: 江西
+      version:
+    -
+      address: "https://fpcy.sd-n-tax.gov.cn"
+      code: 3700
+      ip: ~
+      name: 山东
+      version:
+    -
+      address: "https://fpcy.qd-n-tax.gov.cn"
+      code: 3702
+      ip: ~
+      name: 青岛
+      version:
+    -
+      address: "https://fpcy.ha-n-tax.gov.cn"
+      code: 4100
+      ip: ~
+      name: 河南
+      version:
+    -
+      address: "https://fpcy.hb-n-tax.gov.cn"
+      code: 4200
+      ip: ~
+      name: 湖北
+      version:
+    -
+      address: "https://fpcy.hntax.gov.cn:8083"
+      code: 4300
+      ip: ~
+      name: 湖南
+      version:
+    -
+      address: "https://fpcy.gd-n-tax.gov.cn"
+      code: 4400
+      ip: ~
+      name: 广东
+      version:
+    -
+      address: "https://fpcy.szgs.gov.cn"
+      code: 4403
+      ip: ~
+      name: 深圳
+      version:
+    -
+      address: "https://fpcy.gxgs.gov.cn:8200"
+      code: 4500
+      ip: ~
+      name: 广西
+      version:
+    -
+      address: "https://fpcy.hitax.gov.cn/"
+      code: 4600
+      ip: ~
+      name: 海南
+      version:
+    -
+      address: "https://fpcy.cqsw.gov.cn:80"
+      code: 5000
+      ip: ~
+      name: 重庆
+      version:
+    -
+      address: "https://fpcy.sc-n-tax.gov.cn"
+      code: 5100
+      ip: ~
+      name: 四川
+      version:
+    -
+      address: "https://fpcy.gz-n-tax.gov.cn:80"
+      code: 5200
+      ip: ~
+      name: 贵州
+      version:
+    -
+      address: "https://fpcy.yngs.gov.cn"
+      code: 5300
+      ip: ~
+      name: 云南
+      version:
+    -
+      address: "https://fpcy.xztax.gov.cn:81"
+      code: 5400
+      ip: ~
+      name: 西藏
+      version:
+    -
+      address: "https://fpcyweb.sn-n-tax.gov.cn"
+      code: 6100
+      ip: ~
+      name: 陕西
+      version:
+    -
+      address: "https://fpcy.gs-n-tax.gov.cn"
+      code: 6200
+      ip: ~
+      name: 甘肃
+      version:
+    -
+      address: "http://fpcy.qh-n-tax.gov.cn:80"
+      code: 6300
+      ip: ~
+      name: 青海
+      version:
+    -
+      address: "https://fpcy.nxgs.gov.cn"
+      code: 6400
+      ip: ~
+      name: 宁夏
+      version:
+    -
+      address: "https://fpcy.xj-n-tax.gov.cn"
+      code: 6500
+      ip: ~
+      name: 新疆
+      version:
