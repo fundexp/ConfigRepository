@@ -1,0 +1,4 @@
+spring:
+  profiles: exp
+  datasource:
+    url: jdbc:mysql://${NOTIFICATION_DB}/notification
