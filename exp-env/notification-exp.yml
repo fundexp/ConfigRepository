@@ -7,3 +7,6 @@ spring:
       virtual-host: /
   datasource:
     url: jdbc:mysql://${NOTIFICATION_DB}/notification
+
+ribbon:
+  ReadTimeout: 10000

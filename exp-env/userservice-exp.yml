@@ -11,6 +11,8 @@ spring:
 server:
   port: ${SERVER_PORT}
 
+ribbon:
+  ReadTimeout: 10000
 
 hosts:
   frontend-host: http://${FRONT_ADDR}

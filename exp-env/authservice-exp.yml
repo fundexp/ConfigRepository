@@ -14,5 +14,9 @@ spring:
 server:
   port: ${SERVER_PORT}
 
+ribbon:
+  ReadTimeout: 10000
+
+
 
 

@@ -10,3 +10,6 @@ spring:
 
 robot:
   host: http://${BOT_SERVICE}/api/predictor
+
+ribbon:
+  ReadTimeout: 10000
