@@ -10,3 +10,7 @@ spring:
 
 ribbon:
   ReadTimeout: 10000
+
+
+
+
