@@ -16,3 +16,4 @@ ribbon:
 
 hosts:
   frontend-host: http://${FRONT_ADDR}
+
