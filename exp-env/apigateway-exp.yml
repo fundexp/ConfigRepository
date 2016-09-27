@@ -14,15 +14,15 @@ zuul:
   routes:
     auth:
       path: /login/**
-      serviceId: authservice
+      serviceId: auth
       sensitiveHeaders: Cookie,Set-Cookie
     user:
-      path: /userservice/**
-      serviceId: userservice
+      path: /user/**
+      serviceId: user
       sensitiveHeaders: Cookie,Set-Cookie
     inputs:
-      path: /invoiceinputservice/**
-      serviceId: invoiceinputservice
+      path: /invoiceinput/**
+      serviceId: invoiceinput
       sensitiveHeaders: Cookie,Set-Cookie
 
 ribbon:
